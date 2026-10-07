@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Лабораторна робота №1, варіант 4" />
+    <title>Лабораторна робота №1. Варіант 4</title>
+  </head>
+  <body>
+    <!-- Шапка сайту -->
+    <header>
+      <h1>Лабораторна робота №1</h1>
+      <p>Основи побудови та публікації HTML-документів. <b>Варіант 4</b></p>
+    </header>
+
+    <!-- Основний зміст сторінки -->
+    <main>
+      <!-- 1. Оформлений текст -->
+      <section>
+        <h2>Оформлений текст</h2>
+        <p>
+          Загальна кількість перестановок з <i>n</i> елементів дорівнює
+          <b>добутку всіх цілих чисел</b> від <i>1</i> до <i>n</i>:<br />
+          P<sub>n</sub> =
+          1&bull;2&bull;3&bull;&hellip;&bull;(n&minus;2)&bull;(n&minus;1)&bull;n.
+        </p>
+      </section>
+
+      <!-- 2. Список визначень -->
+      <section>
+        <h2>Дисципліни 3-го курсу</h2>
+        <dl>
+          <dt>Веб-розробка</dt>
+          <dd>HTML, CSS, JavaScript</dd>
+          <dt>Бази даних</dt>
+          <dd>Реляційна модель, мова SQL.</dd>
+          <dt>Операційні системи</dt>
+          <dd>Процеси, пам'ять, файлові системи.</dd>
+          <dt>Комп'ютерні мережі</dt>
+          <dd>Моделі OSI та TCP/IP, протоколи.</dd>
+          <dt>Тощо...</dt>
+        </dl>
+      </section>
+
+      <!-- 3. Таблиця -->
+      <section>
+        <h2>Періодична система хімічних елементів (фрагмент)</h2>
+        <table border="1" width="600">
+          <caption>
+            Елементи 1&ndash;3 періодів (головні підгрупи)
+          </caption>
+          <tr>
+            <th rowspan="2">Період</th>
+            <th colspan="8">Група</th>
+          </tr>
+          <tr>
+            <th>&#8544;</th>
+            <th>&#8545;</th>
+            <th>&#8546;</th>
+            <th>&#8547;</th>
+            <th>&#8548;</th>
+            <th>&#8549;</th>
+            <th>&#8550;</th>
+            <th>&#8551;</th>
+          </tr>
+          <tr align="center">
+            <th>1</th>
+            <td><sup>1</sup><br />H</td>
+            <td colspan="6">&nbsp;</td>
+            <td><sup>2</sup><br />He</td>
+          </tr>
+          <tr align="center">
+            <th>2</th>
+            <td><sup>3</sup><br />Li</td>
+            <td><sup>4</sup><br />Be</td>
+            <td><sup>5</sup><br />B</td>
+            <td><sup>6</sup><br />C</td>
+            <td><sup>7</sup><br />N</td>
+            <td><sup>8</sup><br />O</td>
+            <td><sup>9</sup><br />F</td>
+            <td><sup>10</sup><br />Ne</td>
+          </tr>
+          <tr align="center">
+            <th>3</th>
+            <td><sup>11</sup><br />Na</td>
+            <td><sup>12</sup><br />Mg</td>
+            <td><sup>13</sup><br />Al</td>
+            <td><sup>14</sup><br />Si</td>
+            <td><sup>15</sup><br />P</td>
+            <td><sup>16</sup><br />S</td>
+            <td><sup>17</sup><br />Cl</td>
+            <td><sup>18</sup><br />Ar</td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- 4. Форма -->
+      <section>
+        <h2>Комплектуючі ПК</h2>
+        <form action="#" method="get">
+          <p>
+            <label for="owner">Ім'я власника:</label>
+            <input type="text" id="owner" name="owner" />
+          </p>
+          <p>
+            <label for="cpu">Процесор:</label>
+            <input type="text" id="cpu" name="cpu" />
+          </p>
+          <p>
+            <label for="gpu">Відеокарта:</label>
+            <select id="gpu" name="gpu">
+              <option value="none">Інтегрована</option>
+              <option value="nvidia">NVIDIA</option>
+              <option value="amd">AMD</option>
+              <option value="intel">Intel</option>
+            </select>
+          </p>
+          <p>
+            Накопичувач:
+            <input type="radio" id="ssd" name="storage" value="ssd" checked />
+            <label for="ssd">SSD</label>
+            <input type="radio" id="hdd" name="storage" value="hdd" />
+            <label for="hdd">HDD</label>
+          </p>
+          <p>
+            Додатково:
+            <input type="checkbox" id="wifi" name="extra" value="wifi" />
+            <label for="wifi">Wi-Fi</label>
+            <input type="checkbox" id="cooler" name="extra" value="cooler" />
+            <label for="cooler">Додаткове охолодження</label>
+          </p>
+          <p>
+            <label for="notes">Коментар:</label><br />
+            <textarea id="notes" name="notes" rows="4" cols="40"></textarea>
+          </p>
+          <p>
+            <input type="submit" value="Надіслати" />
+            <input type="reset" value="Очистити" />
+            <button type="button">Кнопка</button>
+          </p>
+        </form>
+      </section>
+
+      <!-- 5. Карта зображень -->
+      <section>
+        <h2>Карта зображень</h2>
+        <p>Натисніть на частину зображення, щоб перейти на потрібний сайт.</p>
+        <img
+          src="images/banner.png"
+          width="600"
+          height="200"
+          alt="Банер: університет, кафедра, розклад"
+          usemap="#banner-map"
+        />
+        <map name="banner-map">
+          <area
+            shape="rect"
+            coords="0,0,199,199"
+            href="https://nure.ua/"
+            target="_blank"
+            alt="Сайт університету"
+            title="Сайт університету"
+          />
+          <area
+            shape="rect"
+            coords="200,0,399,199"
+            href="https://dec.nure.ua/"
+            target="_blank"
+            alt="Сайт кафедри"
+            title="Сайт кафедри"
+          />
+          <area
+            shape="rect"
+            coords="400,0,599,199"
+            href="https://cist.nure.ua/ias/app/tt/f?p=778:2:1576559457742644::NO:::"
+            target="_blank"
+            alt="Розклад занять"
+            title="Розклад занять"
+          />
+        </map>
+      </section>
+    </main>
+  </body>
+</html>
